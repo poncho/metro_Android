@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+    
+    <TextView 
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:text="@string/titulo"
+        />
+
+    <EditText 
+        android:id="@+id/salida"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/titulo"
+        android:layout_marginTop="20dp"
+        android:inputType="text"
+        />
+    
+    <EditText 
+        android:id="@+id/llegada"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/salida"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        />
+    
+    <Button 
+        android:id="@+id/encontrar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/encontrar"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/llegada"
+        android:layout_marginTop="15dp"
+        android:onClick="findRoute"
+        />
+
+</RelativeLayout>

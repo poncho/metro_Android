@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Metro</string>
+    <string name="menu_settings">Settings</string>
+    <string name="titulo">Metro</string>
+    <string name="encontrar">Encontrar ruta</string>
+    <string name="title_activity_rutas">Rutas</string>
+    <string name="empty">Elige ambas estaciones</string>
+
+</resources>
