@@ -23,8 +23,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.metro.Rutas"
-            android:label="@string/title_activity_rutas" >
+            android:name="com.example.metro.mostrarRutas"
+            android:label="@string/title_mostrar_rutas" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.metro.MainActivity" />

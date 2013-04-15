@@ -3,13 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Rutas" >
+    
+    <TextView 
+        android:id="@+id/color1"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:background="#F00"
+        android:textSize="15sp"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:text="Linea P"
+        />
 
    <TextView 
        android:id="@+id/textE1"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_centerHorizontal="true"
-       android:layout_marginTop="20dp"
+       android:layout_marginTop="15dp"
+       android:layout_below="@id/color1"
        android:text="Estacion 1"
        />
    

@@ -5,7 +5,139 @@
     <string name="menu_settings">Settings</string>
     <string name="titulo">Metro</string>
     <string name="encontrar">Encontrar ruta</string>
-    <string name="title_activity_rutas">Rutas</string>
+    <string name="title_mostrar_rutas">Rutas</string>
     <string name="empty">Elige ambas estaciones</string>
+    <string name="sameSt">Elegiste la misma estación</string>
+    <string-array name="estaciones">
+        <item >Observatorio</item>
+        <item >Tacubaya</item>
+        <item >Juanacatlan</item>
+        <item >Chapultepec</item>
+        <item >Sevilla</item>
+        <item >Insurgentes</item>
+        <item >Cuauhtemoc</item>
+        <item >Balderas</item>
+        <item >Salto del Agua</item>
+        <item >Isabel la Catolica</item>
+        <item >Pino Suarez</item>
+        <item >Merced</item>
+        <item >Candelaria</item>
+        <item >San Lazaro</item>
+        <item >Moctezuma</item>
+        <item >Balbuena</item>
+        <item >Boulevard Puerto Aereo</item>
+        <item >Gomez Farías</item>
+        <item >Zaragoza</item>
+        <item >Pantitlan</item>
+        <item >Cuatro Caminos</item>
+        <item >Panteones</item>
+        <item >Tacuba</item>
+        <item >Cuitlahuac</item>
+        <item >Popotla</item>
+        <item >Colegio Militar</item>
+        <item >Normal</item>
+        <item >San Cosme</item>
+        <item >Revolucion</item>
+        <item >Hidalgo</item>
+        <item >Bellas Artes</item>
+        <item >Allende</item>
+        <item >Zocalo</item>
+        <item >San Antonio Abad</item>
+        <item >Chabacano</item>
+        <item >Viaducto</item>
+        <item >Xola</item>
+        <item >Villa de Cortes</item>
+        <item >Nativitas</item>
+        <item >Portales</item>
+        <item >Ermita</item>
+        <item >General Anaya</item>
+        <item >Tasqueña</item>
+        <item >Indios Verdes</item>
+        <item >Deportivo 18 de Marzo</item>
+        <item >Potrero</item>
+        <item >La Raza</item>
+        <item >Tlatelolco</item>
+        <item >Guerrero</item>
+        <item >Juarez</item>
+        <item >Niños Heroes</item>
+        <item >Hospital General</item>
+        <item >Centro Medico</item>
+        <item >Etiopia</item>
+        <item >Eugenia</item>
+        <item >Division del Norte</item>
+        <item >Zapata</item>
+        <item >Coyoacan</item>
+        <item >Viveros</item>
+        <item >Miguel Angel de Quevedo</item>
+        <item >Copilco</item>
+        <item >Universidad</item>
+        <item >Martin Carrera</item>
+        <item >Talisman</item>
+        <item >Bondojito</item>
+        <item >Consulado</item>
+        <item >Canal del Norte</item>
+        <item >Morelos</item>
+        <item >Fray Servando</item>
+        <item >Jamaica</item>
+        <item >Santa Anita</item>
+        <item >Politecnico</item>
+        <item >Instituto del Petroleo</item>
+        <item >Autobuses del Norte</item>
+        <item >Misterios</item>
+        <item >Valle Gomez</item>
+        <item >Aragon</item>
+        <item >Oceania</item>
+        <item >Terminal Aerea</item>
+        <item >Hangares</item>
+        <item >El Rosario</item>
+        <item >Tezozomoc</item>
+        <item >Azcapotzalco</item>
+        <item >Ferreria</item>
+        <item >Norte 45</item>
+        <item >Vallejo</item>
+        <item >Lindavista</item>
+        <item >La Villa-Basilica</item>
+        <item >Martin Carrera</item>
+        <item >Aquiles Serdan</item>
+        <item >Camarones</item>
+        <item >Refineria</item>
+        <item >San Joaquin</item>
+        <item >Polanco</item>
+        <item >Auditorio</item>
+        <item >Constituyentes</item>
+        <item >San Pedro de los Pinos</item>
+        <item >San Antonio</item>
+        <item >Mixcoac</item>
+        <item >Barranca del Muerto</item>
+        <item >Garibaldi</item>
+        <item >San Juan de Letran</item>
+        <item >Doctores</item>
+        <item >Obrera</item>
+        <item >La Viga</item>
+        <item >Coyuya</item>
+        <item >Iztacalco</item>
+        <item >Apatlaco</item>
+        <item >Aculco</item>
+        <item >Escuadron 201</item>
+        <item >Atlalilco</item>
+        <item >Iztapalapa</item>
+        <item >Cerro de la Estrella</item>
+        <item >UAM-I</item>
+        <item >Constitucion de 1917</item>
+        <item >Zocalo</item>
+        <item >Zocalo</item>
+        <item >Zocalo</item>
+        <item >Zocalo</item>
+        <item >Zocalo</item>
+        <item >Zocalo</item>
+        <item >Zocalo</item>
+        <item >Zocalo</item>
+        <item >Zocalo</item>s
+        <item >Zocalo</item>
+        <item >Zocalo</item>
+        <item >Zocalo</item>
+        <item >Zocalo</item>
+        
+    </string-array>
 
 </resources>
