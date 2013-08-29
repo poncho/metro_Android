@@ -27,7 +27,6 @@ public class Route {
 	
 	public void choose_algorithm(Route r){
 		
-		//AGREGAR LO DE LA LINEA 12 con la A
 		r.w = same_line(r);
 		
 		System.out.println("SEGUNDO");
@@ -146,6 +145,30 @@ public class Route {
 			lineList.add(new Station("Tasqueña", 113, null));
 		}
 		
+		if (line == 3){
+			lineList.add(new Station("Indios Verdes", 0, null));
+			lineList.add(new Station("Deportivo 18 de Marzo", 117, new int[]{6}));
+			lineList.add(new Station("Potrero", 99, null));
+			lineList.add(new Station("La Raza", 112, new int[]{3}));
+			lineList.add(new Station("Tlatelolco", 142, null));
+			lineList.add(new Station("Guerrero", 106, new int[]{11}));
+			lineList.add(new Station("Hidalgo", 76, new int[]{2}));
+			lineList.add(new Station("Juarez", 36, null));
+			lineList.add(new Station("Balderas", 72, new int[]{1}));
+			lineList.add(new Station("Niños Heroes", 73, null));
+			lineList.add(new Station("Hospital General", 63, null));
+			lineList.add(new Station("Centro Medico", 71, new int[]{9}));
+			lineList.add(new Station("Etiopia", 113, null));
+			lineList.add(new Station("Eugenia", 98, null));
+			lineList.add(new Station("Division del Norte", 77, null));
+			lineList.add(new Station("Zapata", 84, new int[]{12}));
+			lineList.add(new Station("Coyoacan", 116, null));
+			lineList.add(new Station("Viveros", 94, null));
+			lineList.add(new Station("Miguel Angel de Quevedo", 87, null));
+			lineList.add(new Station("Copilco", 129, null));
+			lineList.add(new Station("Universidad", 130, null));
+		}
+		
 		return lineList;
 	}
 	
@@ -172,6 +195,48 @@ public class Route {
 			stations.put("Gomez Farias", new Integer[]{1});
 			stations.put("Zaragoza", new Integer[]{1});
 			stations.put("Pantitlan", new Integer[]{1, 5, 9, 10});
+			stations.put("Cuatro Caminos", new Integer[]{2});
+			stations.put("Panteones", new Integer[]{2});
+			stations.put("Tacuba", new Integer[]{2, 7});
+			stations.put("Cuitlahuac", new Integer[]{2});
+			stations.put("Popotla", new Integer[]{2});
+			stations.put("Colegio Militar", new Integer[]{2});
+			stations.put("Normal", new Integer[]{2});
+			stations.put("San Cosme", new Integer[]{2});
+			stations.put("Hidalgo", new Integer[]{2, 3});
+			stations.put("Bellas Artes", new Integer[]{2, 8});
+			stations.put("Allende", new Integer[]{2});
+			stations.put("Zocalo", new Integer[]{2});
+			stations.put("San Antonio Abad", new Integer[]{2});
+			stations.put("Chabacano", new Integer[]{2, 8, 9});
+			stations.put("Viaducto", new Integer[]{2});
+			stations.put("Xola", new Integer[]{2});
+			stations.put("Villa de Cortes", new Integer[]{2});
+			stations.put("Nativitas", new Integer[]{2});
+			stations.put("Portales", new Integer[]{2});
+			stations.put("Ermita", new Integer[]{2, 12});
+			stations.put("General Anaya", new Integer[]{2});
+			stations.put("Tasqueña", new Integer[]{2});
+			stations.put("Indios Verdes", new Integer[]{3});
+			stations.put("Deportivo 18 de Marzo", new Integer[]{3, 6});
+			stations.put("Potrero", new Integer[]{3});
+			stations.put("La Raza", new Integer[]{3, 5});
+			stations.put("Tlatelolco", new Integer[]{3});
+			stations.put("Guerrero", new Integer[]{3, 11});
+			stations.put("Juarez", new Integer[]{3});
+			stations.put("Niños Heroes", new Integer[]{3});
+			stations.put("Hospital General", new Integer[]{3});
+			stations.put("Centro Medico", new Integer[]{3, 9});
+			stations.put("Etiopia", new Integer[]{3});
+			stations.put("Eugenia", new Integer[]{3});
+			stations.put("Division del Norte", new Integer[]{3});
+			stations.put("Zapata", new Integer[]{3, 12});
+			stations.put("Coyoacan", new Integer[]{3});
+			stations.put("Viveros", new Integer[]{3});
+			stations.put("Miguel Angel de Quevedo", new Integer[]{3});
+			stations.put("Copilco", new Integer[]{3});
+			stations.put("Universidad", new Integer[]{3});
+			
 			
 			//INCOMPLETO
 			
