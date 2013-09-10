@@ -1,8 +1,11 @@
 package com.example.metro;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+
+import android.R.integer;
 
 import com.example.metro.TimeFuncs;
 
@@ -11,9 +14,9 @@ public class Route {
 	public String e2;
 	public Integer[] ls1;
 	public Integer[] ls2;
-	public Integer[] time;
-	public String[] steps;
-	public int line;
+	public ArrayList<Integer> time;
+	public ArrayList<String[]> steps;
+	public ArrayList<Integer[]> line;
 	public Boolean w;
 
 	
@@ -22,6 +25,9 @@ public class Route {
 		e2 = StartE2;
 		ls1 = get_station(e1);
 		ls2 = get_station(e2);
+		time = new ArrayList<Integer>();
+		steps = new ArrayList<String[]>();
+		line = new ArrayList<Integer[]>();
 		w = false;
 	}
 	
@@ -29,9 +35,8 @@ public class Route {
 		
 		r.w = same_line(r);
 		
-		System.out.println("SEGUNDO");
-		
 		if(r.w == false){
+			System.out.println("UN TRANSBORDE");
 			r.w = one_transb(r);
 		}
 		/*if (r.w == false){
@@ -50,9 +55,9 @@ public class Route {
 			for(int j=0; j<r.ls2.length; j++){
 				if(r.ls1[i] == r.ls2[j]){
 					ArrayList<Station> l = return_line(r.ls1[i]);
-					r.line = r.ls1[i]; //Color passed
-					r.steps = new String[]{r.e1, direction(r.e1, r.e2, l), r.e2};
-					r.time = new TimeFuncs().calcTime(r.e1, r.e2, l);
+					r.line.add(new Integer[]{r.ls1[i]}); //Color passed
+					r.steps.add(new String[]{r.e1, direction(r.e1, r.e2, l), r.e2});
+					r.time.add(new TimeFuncs().calcTime(r.e1, r.e2, l));
 					return true;
 				}
 			}
@@ -62,18 +67,30 @@ public class Route {
 	}
 	
 	public boolean one_transb(Route r){
+		Integer timeTmp = 0;
+		TimeFuncs timeFn = new TimeFuncs();
+		
 		for(int i=0; i<r.ls2.length; i++){
 			ArrayList<Station> l2 = return_line(r.ls2[i]);
-			for(int j=0; j<ls1.length; i++){
-				ArrayList<Station> l1 = return_line(r.ls1[i]);
-				for(int k=0; k<l2.size();k++){
+			for(int j=0; j<ls1.length; j++){
+				ArrayList<Station> l1 = return_line(r.ls1[j]);
+				for(int k=0; k<l1.size();k++){
 					if(l1.get(k).lines != null && l1.get(k).exists(r.ls2[i])){
-						r.time = new Integer[]{1};
+						timeTmp = timeTmp + timeFn.calcTime(r.e1, l1.get(k).name, l1);
+						timeTmp = timeTmp + timeFn.calcTime(r.e2, l1.get(k).name, l2);
+						r.time.add(timeTmp); //Agregar tiempo transborde
+						timeTmp = 0;
+						r.steps.add(new String[]{r.e1, direction(r.e1, l1.get(k).name, l1), l1.get(k).name,
+													direction(l1.get(k).name, r.e2, l2), r.e2});
+						r.line.add(new Integer[]{r.ls1[j], r.ls2[i]});
 					}
 				}
 			}
 		}
-		return true;
+		if(r.steps.size() >= 1){
+			return true;
+		}
+		return false;
 	}
 
 	public void two_transb(Route r){
@@ -203,6 +220,7 @@ public class Route {
 			stations.put("Colegio Militar", new Integer[]{2});
 			stations.put("Normal", new Integer[]{2});
 			stations.put("San Cosme", new Integer[]{2});
+			stations.put("Revolucion",new Integer[]{2});
 			stations.put("Hidalgo", new Integer[]{2, 3});
 			stations.put("Bellas Artes", new Integer[]{2, 8});
 			stations.put("Allende", new Integer[]{2});

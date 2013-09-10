@@ -3,60 +3,83 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Rutas" >
-    
-    <TextView 
+
+    <TextView
         android:id="@+id/color1"
         android:layout_width="fill_parent"
         android:layout_height="30dp"
-        android:gravity="center"
         android:background="#F00"
-        android:textSize="15sp"
-        android:textColor="#FFF"
-        android:textStyle="bold"
+        android:gravity="center"
         android:text="Linea X"
-        />
+        android:textColor="#FFF"
+        android:textSize="15sp"
+        android:textStyle="bold" />
 
-   <TextView 
-       android:id="@+id/textE1"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_centerHorizontal="true"
-       android:layout_marginTop="15dp"
-       android:layout_below="@id/color1"
-       android:text="Estacion 1"
-       />
-   
-   <TextView 
-       android:id="@+id/textE2"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_centerHorizontal="true"
-       android:layout_below="@id/textE1"
-       android:layout_marginTop="20dp"
-       android:text="Estacion 2"
-       />
-   
-   <TextView 
-       android:id="@+id/textE3"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_centerHorizontal="true"
-       android:layout_below="@id/textE2"
-       android:layout_marginTop="20dp"
-       android:text="Estacion 3"
-       />
+    <TextView
+        android:id="@+id/textI1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/color1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Estacion Inicio 1" />
 
-   <TextView
-       android:id="@+id/color2"
-       android:layout_width="fill_parent"
-       android:layout_height="30dp"
-       android:layout_below="@+id/textE3"
-       android:layout_marginTop="34dp"
-       android:background="#F00"
-       android:gravity="center"
-       android:text="Linea X2"
-       android:textColor="#FFF"
-       android:textSize="15sp"
-       android:textStyle="bold" />
+    <TextView
+        android:id="@+id/textD1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textI1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Direccion 1" />
+
+    <TextView
+        android:id="@+id/textF1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textD1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Estacion Final 1" />
+
+    <TextView
+        android:id="@+id/color2"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/textF1"
+        android:layout_marginTop="34dp"
+        android:background="#F00"
+        android:gravity="center"
+        android:text="Linea X2"
+        android:textColor="#FFF"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textI2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/color2"
+        android:layout_marginTop="15dp"
+        android:text="Estacion Inicio 2" />
+
+    <TextView
+        android:id="@+id/textD2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textI2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Direccion 2" />
+
+    <TextView
+        android:id="@+id/textF2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textD2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Estacion Final 2" />
 
 </RelativeLayout>

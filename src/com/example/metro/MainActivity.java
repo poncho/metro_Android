@@ -1,5 +1,7 @@
 package com.example.metro;
 
+import java.util.Arrays;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -14,6 +16,7 @@ import android.widget.Toast;
 public class MainActivity extends Activity {
 
 	String[] listaEstaciones;
+	int[] listaLineas;
 	
 	@Override 
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +31,11 @@ public class MainActivity extends Activity {
 		
 		AutoCompleteTextView lista1 = 
 				(AutoCompleteTextView)findViewById(R.id.salida);
-				lista1.setThreshold(1);
+				lista1.setThreshold(2);
 				lista1.setAdapter(adapter);
 		AutoCompleteTextView lista2 = 
 				(AutoCompleteTextView)findViewById(R.id.llegada);
-				lista2.setThreshold(1);
+				lista2.setThreshold(2);
 				lista2.setAdapter(adapter);
 	}
 
@@ -69,11 +72,18 @@ public class MainActivity extends Activity {
 		route.choose_algorithm(route);
 		
 		//Se agregan las variables para mostrar en la actividad de muestra
-		for (int i=0; i<route.steps.length;i++){
-			intent.putExtra("ESTACION" + i, route.steps[i]);
+		
+		listaLineas = new int[route.line.get(0).length];
+		
+		for (int i = 0; i < route.line.get(0).length; i++) {
+			listaLineas[i] = route.line.get(0)[i];
 		}
-		intent.putExtra("LINE", route.line);
-		intent.putExtra("SIZE", route.steps.length);
+		
+		intent.putExtra("STEPS", route.steps.get(0));
+		intent.putExtra("LINE", listaLineas);
+		intent.putExtra("SIZE", route.steps.get(0).length);
+		//System.out.println("LINE: "+Arrays.toString(route.line.get(0)));
+		//System.out.println("SIZE: "+route.steps.get(0).length);
 		startActivity(intent);
 	}
 

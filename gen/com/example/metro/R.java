@@ -21,11 +21,14 @@ public final class R {
         public static final int color2=0x7f080008;
         public static final int encontrar=0x7f080003;
         public static final int llegada=0x7f080002;
-        public static final int menu_settings=0x7f080009;
+        public static final int menu_settings=0x7f08000c;
         public static final int salida=0x7f080001;
-        public static final int textE1=0x7f080005;
-        public static final int textE2=0x7f080006;
-        public static final int textE3=0x7f080007;
+        public static final int textD1=0x7f080006;
+        public static final int textD2=0x7f08000a;
+        public static final int textF1=0x7f080007;
+        public static final int textF2=0x7f08000b;
+        public static final int textI1=0x7f080005;
+        public static final int textI2=0x7f080009;
         public static final int titulo=0x7f080000;
     }
     public static final class layout {

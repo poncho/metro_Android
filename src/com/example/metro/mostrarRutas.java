@@ -1,5 +1,8 @@
 package com.example.metro;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -14,40 +17,44 @@ public class mostrarRutas extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.mostrar_rutas);
 		Intent intent = getIntent();
-		String[] steps = new String[9];
-		//Integer[] line = new Integer[3];
+		
 		TextView linea1 = (TextView)findViewById(R.id.color1);
-		TextView textE1 = (TextView)findViewById(R.id.textE1);
-		TextView textE2 = (TextView)findViewById(R.id.textE2);
-		TextView textE3 = (TextView)findViewById(R.id.textE3);
+		TextView textI1 = (TextView)findViewById(R.id.textI1);
+		TextView textD1 = (TextView)findViewById(R.id.textD1);
+		TextView textF1 = (TextView)findViewById(R.id.textF1);
 		
 		TextView linea2 = (TextView)findViewById(R.id.color2);
+		TextView textI2 = (TextView)findViewById(R.id.textI2);
+		TextView textD2 = (TextView)findViewById(R.id.textD2);
+		TextView textF2 = (TextView)findViewById(R.id.textF2);
 		
 		
 		//Gets 
 		Bundle extras = intent.getExtras();
 		int stepSize = extras.getInt("SIZE");
-		int line = extras.getInt("LINE");
-		
+		int[] line = extras.getIntArray("LINE");
+		System.out.println("SIZE: "+stepSize);
 		//Creates array of variables
 		//Steps
-		for(int i=0; i<stepSize; i++){
-			steps[i] = extras.getString("ESTACION" + i);
-		}
+		String[] steps = extras.getStringArray("STEPS");
+		System.out.println("STEPS: "+Arrays.toString(steps));
 		
 		if(steps.length >= 3){
-			setColorAndName(linea1, line);
-			textE1.setText(steps[0]);
-			textE2.setText(steps[1]);
-			textE3.setText(steps[2]);
+			setColorAndName(linea1, line[0]);
+			textI1.setText("De "+steps[0]);
+			textD1.setText("Con dirección "+steps[1]);
+			textF1.setText("Hasta "+steps[2]);
 			linea2.setVisibility(View.GONE);
 		}
-		if(steps.length > 3 && steps.length < 6){
+		if(steps.length > 3 && steps.length <= 5){
 			linea2.setVisibility(View.VISIBLE);
-			setColorAndName(linea2, line);
-			textE1.setText(steps[3]);
-			textE2.setText(steps[4]);
-			textE3.setText(steps[5]);
+			textI2.setVisibility(View.VISIBLE);
+			textD2.setVisibility(View.VISIBLE);
+			textF2.setVisibility(View.VISIBLE);
+			setColorAndName(linea2, line[1]);
+			textI2.setText("De "+steps[2]);
+			textD2.setText("Con dirección "+steps[3]);
+			textF2.setText("Hasta "+steps[4]);
 		}
 		
 	}
